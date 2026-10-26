@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="ru">
-<head>
+<html lang="ru"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#14251f">
@@ -22,40 +21,131 @@
 </header>
 <main>
   <article class="resume">
-    <section class="hero"><div><p class="eyebrow" data-i18n="eyebrow">Профессиональное резюме</p><h1 class="name" id="name"></h1><p class="intro" id="summary"></p></div><div class="photo-wrap"><img id="photo" src="photo.png" alt="Фото профиля"><div class="photo-fallback" id="photoFallback" style="display:none">photo.png<br>Добавьте фото</div></div></section>
+    <section class="hero"><div><p class="eyebrow" data-i18n="eyebrow">Профессиональное резюме</p><h1 class="name" id="name">Егор Ромашин</h1><p class="intro" id="summary">-</p></div><div class="photo-wrap"><img id="photo" src="photo.png" alt="Фото профиля" style="display: none;"><div class="photo-fallback" id="photoFallback" style="display: grid;">photo.png<br>Добавьте фото</div></div></section>
     <section class="content"><div class="column">
-      <section class="section"><h2 data-i18n="personal">Личная информация</h2><div class="entry"><h3 data-i18n="birth">Дата рождения</h3><p class="plain" id="birth"></p></div></section>
-      <section class="section"><h2 data-i18n="education">Образование</h2><div id="educationList"></div></section>
-      <section class="section"><h2 data-i18n="about">О себе</h2><p class="plain" id="about"></p></section>
+      <section class="section"><h2 data-i18n="personal">Личная информация</h2><div class="entry"><h3 data-i18n="birth">Дата рождения</h3><p class="plain" id="birth">07.07.2010</p></div></section>
+      <section class="section"><h2 data-i18n="education">Образование</h2><div id="educationList"><div class="entry"><h3>Основное общее</h3><div class="meta">ГБОУ ПО "Академический лицей №14 имени генералиссимуса Суворова" · 2017-2026</div></div><div class="entry"><h3>Разработка и управление ПО</h3><div class="meta">Многопрофильный Колледж ПГУ · 2026-</div></div></div></section>
+      <section class="section"><h2 data-i18n="about">О себе</h2><p class="plain" id="about">-</p></section>
     </div><div class="column">
-      <section class="section"><h2 data-i18n="experience">Опыт работы</h2><div id="experienceList"></div></section>
-      <section class="section"><h2 data-i18n="skills">Навыки</h2><p class="plain" id="skills"></p></section>
-      <section class="section"><h2 data-i18n="contacts">Контакты</h2><div class="contacts" id="contactsList"></div></section>
+      <section class="section"><h2 data-i18n="experience">Опыт работы</h2><div id="experienceList"><div class="entry"><h3>Оператор ПВЗ</h3><div class="meta">Яндекс Маркет · 25.09.2026-Now</div><p>Работаю на пункте выдачи заказов Яндекс Маркет</p></div><div class="entry"><h3>Почтальон Промоутер</h3><div class="meta">Ростелеком · 2024-2024</div></div><div class="entry"><h3>-</h3><div class="meta">Самозанятый · 2025-Now</div></div></div></section>
+      <section class="section"><h2 data-i18n="skills">Навыки</h2><p class="plain" id="skills">-</p></section>
+      <section class="section"><h2 data-i18n="contacts">Контакты</h2><div class="contacts" id="contactsList"><div class="contact"><span>Электронная почта</span><a class="contact" href="mailto:email@example.com">email@example.com</a></div></div></section>
     </div></section>
     <footer class="footer"><span data-i18n="footer">Резюме • Профессиональный профиль</span><span id="updated"></span></footer>
   </article>
 </main>
 <div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><div class="dialog" style="max-width:420px"><div class="dialog-head"><h2 id="loginTitle">Вход в редактор</h2><button class="close" data-close="loginModal" aria-label="Закрыть">×</button></div>
-<form id="loginForm"><div class="field"><label for="password" data-i18n="passwordLabel">Пароль редактора</label><input id="password" type="password" autocomplete="current-password" required></div><p class="hint" data-i18n="securityHint">Демо-проверка в браузере не является полноценной защитой.</p><div class="dialog-actions"><button class="btn" type="button" data-close="loginModal" data-i18n="cancel">Отмена</button><button class="btn primary" type="submit" data-i18n="login">Войти</button></div></form></div></div>
-<div class="modal" id="editorModal" role="dialog" aria-modal="true" aria-labelledby="editorTitle"><div class="dialog"><div class="dialog-head"><h2 id="editorTitle" data-i18n="editorTitle">Редактирование резюме</h2><button class="close" data-close="editorModal" aria-label="Закрыть">×</button></div>
+<form id="loginForm"><div class="field"><label for="password" data-i18n="passwordLabel">Пароль редактора</label><input id="password" type="password" autocomplete="current-password" required=""></div><p class="hint" data-i18n="securityHint">Проверка хеша в браузере не заменяет серверную авторизацию.</p><div class="dialog-actions"><button class="btn" type="button" data-close="loginModal" data-i18n="cancel">Отмена</button><button class="btn primary" type="submit" data-i18n="login">Войти</button></div></form></div></div>
+<div class="modal open" id="editorModal" role="dialog" aria-modal="true" aria-labelledby="editorTitle"><div class="dialog"><div class="dialog-head"><h2 id="editorTitle" data-i18n="editorTitle">Редактирование резюме</h2><button class="close" data-close="editorModal" aria-label="Закрыть">×</button></div>
 <div class="notice" data-i18n="saveNotice">Нажмите «Скачать обновлённый HTML», затем замените index.html в репозитории GitHub. Изменения не публикуются автоматически.</div>
-<form id="editorForm"><div id="editorFields"></div><div class="dialog-actions"><button class="btn" type="button" data-close="editorModal" data-i18n="cancel">Отмена</button><button class="btn primary" type="button" id="exportBtn" data-i18n="exportHtml">Скачать обновлённый HTML</button></div><p class="hint" data-i18n="storageHint">Данные будут записаны внутрь скачиваемого index.html.</p></form></div></div>
-<div class="toast" id="toast" role="status"></div>
+<form id="editorForm"><div id="editorFields"><div class="edit-grid"><div class="field "><label for="f_nameRu">Имя и фамилия (RU)</label><input id="f_nameRu" name="nameRu" value="Егор Ромашин"></div><div class="field "><label for="f_nameEn">Имя и фамилия (EN)</label><input id="f_nameEn" name="nameEn" value="Egor Romashin"></div><div class="field "><label for="f_birth">Дата рождения</label><input id="f_birth" name="birth" value="07.07.2010"></div><div class="field "><label for="f_photo">Путь к фото</label><input id="f_photo" name="photo" value="photo.png"></div><div class="field full"><label for="f_summaryRu">Краткое описание (RU)</label><textarea id="f_summaryRu" name="summaryRu">-</textarea></div><div class="field full"><label for="f_summaryEn">Краткое описание (EN)</label><textarea id="f_summaryEn" name="summaryEn">-</textarea></div><div class="field full"><label for="f_aboutRu">О себе (RU)</label><textarea id="f_aboutRu" name="aboutRu">С 5-го класса интересуюсь программированием. Проходил курсы по C# и C++, в рамках которых создавал различные проекты на этих языках программирования.
+
+Также изучал HTML для разработки веб-сайтов.
+
+В настоящее время обучаюсь в Многопрофильном колледже Пензенского государственного университета по специальности 09.02.11 «Разработка и управление программным обеспечением».
+
+С 7-го по 9-й класс активно интересовался разработкой модификаций для видеоигры Garry’s Mod. Создавал различные модификации на языке Lua, а также разрабатывал и запускал многопользовательские игровые серверы.</textarea></div><div class="field full"><label for="f_aboutEn">О себе (EN)</label><textarea id="f_aboutEn" name="aboutEn">I have been interested in programming since the 5th grade. I have taken courses in C# and C++, during which I developed various projects using these programming languages.
+
+I have also studied HTML for web development.
+
+I am currently studying at the Multidisciplinary College of Penza State University, specializing in Software Development and Management (09.02.11).
+
+From the 7th to the 9th grade, I was particularly interested in developing modifications for the video game Garry’s Mod. I created various mods using Lua and developed and managed multiplayer game servers.</textarea></div><div class="field "><label for="f_skillsRu">Навыки (RU, через запятую)</label><textarea id="f_skillsRu" name="skillsRu">Программирование на C#, программирование на C++, основы веб-разработки, HTML, программирование на Lua, разработка модификаций для Garry’s Mod, создание и администрирование многопользовательских игровых серверов, работа с клиентами, консультирование клиентов, обработка заказов, приём и выдача товаров, организация хранения товаров, соблюдение рабочих регламентов, коммуникабельность, ответственность, внимательность к деталям, работа в команде, решение проблем, обучаемость.</textarea></div><div class="field "><label for="f_skillsEn">Навыки (EN, через запятую)</label><textarea id="f_skillsEn" name="skillsEn">C# Programming, C++ Programming, Web Development Fundamentals, HTML, Lua Programming, Garry’s Mod Mod Development, Multiplayer Game Server Setup and Administration, Customer Service, Customer Assistance, Order Processing, Receiving and Handing Over Parcels, Inventory Organization, Following Operational Procedures, Communication Skills, Reliability, Attention to Detail, Teamwork, Problem-Solving, Adaptability, Willingness to Learn.</textarea></div></div><p class="hint">Положите фото рядом с HTML и укажите photo.png, либо укажите относительный путь к изображению.</p>
+ <div class="editor-section"><h3>Образование</h3><div id="eduEditor"><div class="repeat-item"><div class="repeat-head"><span>Образование #1</span><button type="button" class="danger" data-remove="education:0">Удалить</button></div><div class="edit-grid"><div class="field "><label for="f_edu_inst_ru_0">Учебное заведение (RU)</label><input id="f_edu_inst_ru_0" name="edu_inst_ru_0" value="ГБОУ ПО &quot;Академический лицей №14 имени генералиссимуса Суворова&quot;"></div><div class="field "><label for="f_edu_inst_en_0">Учебное заведение (EN)</label><input id="f_edu_inst_en_0" name="edu_inst_en_0" value="SBEI Penza Region &quot;Academic Lyceum No. 14 named after Generalissimo Suvorov&quot;"></div><div class="field "><label for="f_edu_deg_ru_0">Степень / квалификация (RU)</label><input id="f_edu_deg_ru_0" name="edu_deg_ru_0" value="Основное общее"></div><div class="field "><label for="f_edu_deg_en_0">Степень / квалификация (EN)</label><input id="f_edu_deg_en_0" name="edu_deg_en_0" value="Basic General"></div><div class="field full"><label for="f_edu_period_0">Период</label><input id="f_edu_period_0" name="edu_period_0" value="2017 - 2026"></div><div class="field "><label for="f_edu_details_ru_0">Описание (RU)</label><textarea id="f_edu_details_ru_0" name="edu_details_ru_0"></textarea></div><div class="field "><label for="f_edu_details_en_0">Описание (EN)</label><textarea id="f_edu_details_en_0" name="edu_details_en_0"></textarea></div></div></div><div class="repeat-item"><div class="repeat-head"><span>Образование #2</span><button type="button" class="danger" data-remove="education:1">Удалить</button></div><div class="edit-grid"><div class="field "><label for="f_edu_inst_ru_1">Учебное заведение (RU)</label><input id="f_edu_inst_ru_1" name="edu_inst_ru_1" value="Многопрофильный Колледж ПГУ"></div><div class="field "><label for="f_edu_inst_en_1">Учебное заведение (EN)</label><input id="f_edu_inst_en_1" name="edu_inst_en_1" value="Multidisciplinary College of PSU"></div><div class="field "><label for="f_edu_deg_ru_1">Степень / квалификация (RU)</label><input id="f_edu_deg_ru_1" name="edu_deg_ru_1" value="Разработка и управление ПО"></div><div class="field "><label for="f_edu_deg_en_1">Степень / квалификация (EN)</label><input id="f_edu_deg_en_1" name="edu_deg_en_1" value="Software development and management"></div><div class="field full"><label for="f_edu_period_1">Период</label><input id="f_edu_period_1" name="edu_period_1" value="2026 - Now"></div><div class="field "><label for="f_edu_details_ru_1">Описание (RU)</label><textarea id="f_edu_details_ru_1" name="edu_details_ru_1"></textarea></div><div class="field "><label for="f_edu_details_en_1">Описание (EN)</label><textarea id="f_edu_details_en_1" name="edu_details_en_1"></textarea></div></div></div></div><button class="add" type="button" id="addEdu">+ Добавить образование</button></div>
+ <div class="editor-section"><h3>Опыт работы</h3><div id="expEditor"><div class="repeat-item"><div class="repeat-head"><span>Опыт работы #1</span><button type="button" class="danger" data-remove="experience:0">Удалить</button></div><div class="edit-grid"><div class="field "><label for="f_exp_company_ru_0">Компания (RU)</label><input id="f_exp_company_ru_0" name="exp_company_ru_0" value="Яндекс Маркет"></div><div class="field "><label for="f_exp_company_en_0">Компания (EN)</label><input id="f_exp_company_en_0" name="exp_company_en_0" value="Yandex Market"></div><div class="field "><label for="f_exp_pos_ru_0">Должность (RU)</label><input id="f_exp_pos_ru_0" name="exp_pos_ru_0" value="Оператор ПВЗ"></div><div class="field "><label for="f_exp_pos_en_0">Должность (EN)</label><input id="f_exp_pos_en_0" name="exp_pos_en_0" value="Pickup point operator"></div><div class="field full"><label for="f_exp_period_0">Период</label><input id="f_exp_period_0" name="exp_period_0" value="25.09.2026 - Now"></div><div class="field "><label for="f_exp_details_ru_0">Описание (RU)</label><textarea id="f_exp_details_ru_0" name="exp_details_ru_0"></textarea></div><div class="field "><label for="f_exp_details_en_0">Описание (EN)</label><textarea id="f_exp_details_en_0" name="exp_details_en_0"></textarea></div></div></div><div class="repeat-item"><div class="repeat-head"><span>Опыт работы #2</span><button type="button" class="danger" data-remove="experience:1">Удалить</button></div><div class="edit-grid"><div class="field "><label for="f_exp_company_ru_1">Компания (RU)</label><input id="f_exp_company_ru_1" name="exp_company_ru_1" value="Ростелеком"></div><div class="field "><label for="f_exp_company_en_1">Компания (EN)</label><input id="f_exp_company_en_1" name="exp_company_en_1" value="Rostelecom"></div><div class="field "><label for="f_exp_pos_ru_1">Должность (RU)</label><input id="f_exp_pos_ru_1" name="exp_pos_ru_1" value="Почтальон Промоутер"></div><div class="field "><label for="f_exp_pos_en_1">Должность (EN)</label><input id="f_exp_pos_en_1" name="exp_pos_en_1" value="Postman Promoter"></div><div class="field full"><label for="f_exp_period_1">Период</label><input id="f_exp_period_1" name="exp_period_1" value="2024 - 2024"></div><div class="field "><label for="f_exp_details_ru_1">Описание (RU)</label><textarea id="f_exp_details_ru_1" name="exp_details_ru_1"></textarea></div><div class="field "><label for="f_exp_details_en_1">Описание (EN)</label><textarea id="f_exp_details_en_1" name="exp_details_en_1"></textarea></div></div></div></div><button class="add" type="button" id="addExp">+ Добавить место работы</button></div>
+ <div class="editor-section"><h3>Контакты</h3><div id="contactEditor"><div class="repeat-item"><div class="repeat-head"><span>Контакты #1</span><button type="button" class="danger" data-remove="contacts:0">Удалить</button></div><div class="edit-grid"><div class="field"><label>Тип контакта</label><select name="contact_type_0"><option value="email">Электронная почта</option><option value="phone">Телефон</option><option value="website">Сайт</option><option value="location">Город</option><option value="other" selected="">Другое</option></select></div><div class="field "><label for="f_contact_value_0">Значение</label><input id="f_contact_value_0" name="contact_value_0" value="tg: @Slav0o"></div></div></div></div><button class="add" type="button" id="addContact">+ Добавить контакт</button></div></div><div class="dialog-actions"><button class="btn" type="button" data-close="editorModal" data-i18n="cancel">Отмена</button><button class="btn primary" type="button" id="exportBtn" data-i18n="exportHtml">Скачать обновлённый HTML</button></div><p class="hint" data-i18n="storageHint">Данные будут записаны внутрь скачиваемого index.html.</p></form></div></div>
+<div class="toast" id="toast" role="status">Неверный пароль</div>
 
 <!-- Все исходные данные резюме находятся в этом блоке. Редактор перезаписывает его в скачиваемом HTML. -->
 <script id="resume-data" type="application/json">
 {
-  "name":{"ru":"Имя Фамилия","en":"First Last"},
-  "birth":"",
-  "summary":{"ru":"Добавьте короткое профессиональное описание в редакторе.","en":"Add a short professional summary in the editor."},
-  "about":{"ru":"","en":""},
-  "skills":{"ru":"","en":""},
-  "photo":"photo.png",
-  "education":[],
-  "experience":[],
-  "contacts":[
-    {"type":"email","value":"email@example.com"},
-    {"type":"phone","value":"+00 000 000 000"}
+  "name": {
+    "ru": "Егор Ромашин",
+    "en": "Egor Romashin"
+  },
+  "birth": "07.07.2010",
+  "summary": {
+    "ru": "-",
+    "en": "-"
+  },
+  "about": {
+    "ru": "С 5-го класса интересуюсь программированием. Проходил курсы по C# и C++, в рамках которых создавал различные проекты на этих языках программирования.\n\nТакже изучал HTML для разработки веб-сайтов.\n\nВ настоящее время обучаюсь в Многопрофильном колледже Пензенского государственного университета по специальности 09.02.11 «Разработка и управление программным обеспечением».\n\nС 7-го по 9-й класс активно интересовался разработкой модификаций для видеоигры Garry’s Mod. Создавал различные модификации на языке Lua, а также разрабатывал и запускал многопользовательские игровые серверы.",
+    "en": "I have been interested in programming since the 5th grade. I have taken courses in C# and C++, during which I developed various projects using these programming languages.\n\nI have also studied HTML for web development.\n\nI am currently studying at the Multidisciplinary College of Penza State University, specializing in Software Development and Management (09.02.11).\n\nFrom the 7th to the 9th grade, I was particularly interested in developing modifications for the video game Garry’s Mod. I created various mods using Lua and developed and managed multiplayer game servers."
+  },
+  "skills": {
+    "ru": "Программирование на C#, программирование на C++, основы веб-разработки, HTML, программирование на Lua, разработка модификаций для Garry’s Mod, создание и администрирование многопользовательских игровых серверов, работа с клиентами, консультирование клиентов, обработка заказов, приём и выдача товаров, организация хранения товаров, соблюдение рабочих регламентов, коммуникабельность, ответственность, внимательность к деталям, работа в команде, решение проблем, обучаемость.",
+    "en": "C# Programming, C++ Programming, Web Development Fundamentals, HTML, Lua Programming, Garry’s Mod Mod Development, Multiplayer Game Server Setup and Administration, Customer Service, Customer Assistance, Order Processing, Receiving and Handing Over Parcels, Inventory Organization, Following Operational Procedures, Communication Skills, Reliability, Attention to Detail, Teamwork, Problem-Solving, Adaptability, Willingness to Learn."
+  },
+  "photo": "photo.png",
+  "education": [
+    {
+      "institution": {
+        "ru": "ГБОУ ПО \"Академический лицей №14 имени генералиссимуса Суворова\"",
+        "en": "SBEI Penza Region \"Academic Lyceum No. 14 named after Generalissimo Suvorov\""
+      },
+      "degree": {
+        "ru": "Основное общее",
+        "en": "Basic General"
+      },
+      "period": "2017 - 2026",
+      "details": {
+        "ru": "",
+        "en": ""
+      }
+    },
+    {
+      "institution": {
+        "ru": "Многопрофильный Колледж ПГУ",
+        "en": "Multidisciplinary College of PSU"
+      },
+      "degree": {
+        "ru": "Разработка и управление ПО",
+        "en": "Software development and management"
+      },
+      "period": "2026 - Now",
+      "details": {
+        "ru": "",
+        "en": ""
+      }
+    }
+  ],
+  "experience": [
+    {
+      "company": {
+        "ru": "Яндекс Маркет",
+        "en": "Yandex Market"
+      },
+      "position": {
+        "ru": "Оператор ПВЗ",
+        "en": "Pickup point operator"
+      },
+      "period": "25.09.2026 - Now",
+      "details": {
+        "ru": "",
+        "en": ""
+      }
+    },
+    {
+      "company": {
+        "ru": "Ростелеком",
+        "en": "Rostelecom"
+      },
+      "position": {
+        "ru": "Почтальон Промоутер",
+        "en": "Postman Promoter"
+      },
+      "period": "2024 - 2024",
+      "details": {
+        "ru": "",
+        "en": ""
+      }
+    }
+  ],
+  "contacts": [
+    {
+      "type": "other",
+      "value": "tg: @Slav0o"
+    }
   ]
 }
 </script>
@@ -125,5 +215,6 @@ $("photo").onerror=()=>{$("photo").style.display="none";$("photoFallback").style
 render();
 })();
 </script>
-</body>
-</html>
+
+
+</body></html>
